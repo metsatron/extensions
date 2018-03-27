@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar opciók">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar beállítások">
+<!ENTITY vtb.label.width.of.tab.bar "Fülsáv szélessége:">
+<!ENTITY vtb.label.position "Fülsáv pozíciója:">
+<!ENTITY vtb.radio.position.left "Bal">
+<!ENTITY vtb.radio.position.right "Jobb">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Lapok címének ellentétes felsorakoztatása">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "A bezáró gomb és a weboldal inkonjának felcserélése">
+<!ENTITY vtb.label.selectedtab "When a tab is selected:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Highlight it">
+<!ENTITY vtb.checkbox.selectedtab.effect "Move it a little to increase the 3D impression">

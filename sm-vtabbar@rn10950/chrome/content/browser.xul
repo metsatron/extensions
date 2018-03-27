@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<overlay id="verttabbar"
+         xmlns:html="http://www.w3.org/1999/xhtml"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<keyset>
+	<key id="move-tab-up-key"
+		modifiers="accel shift" keycode="VK_PAGE_UP"
+		command="move-tab-up-command"/>
+	<key id="move-tab-down-key"
+		modifiers="accel shift" keycode="VK_PAGE_DOWN"
+		command="move-tab-down-command"/>
+</keyset>
+
+<commandset>
+	<command id="move-tab-up-command"
+		oncommand="vertTabbar.move_tab_up();"/>
+	<command id="move-tab-down-command"
+		oncommand="vertTabbar.move_tab_down();"/>
+</commandset>
+
+<script>
+<![CDATA[
+    var vertTabbar = {
+        prefs: null,
+        tabBrowser: null,
+        startup: function()
+        {
+            // Get the tabbrowser and the pref branch
+            this.tabBrowser = document.getElementById("content");
+            this.prefs = Components.classes["@mozilla.org/preferences-service;1"]
+                .getService(Components.interfaces.nsIPrefService)
+                .getBranch("verttabbar.");
+            this.prefs.QueryInterface(Components.interfaces.nsIPrefBranch2);
+            // Listen for preferences changes
+            this.prefs.addObserver("", this, false);
+            // Change some drag-and-drop functions to cope with vertical tabbar
+            this.tabBrowser.canDrop = function(u, v, w) { return true; }; // Firefox 3.0 compat
+            this._setEffectAllowedForDataTransfer = this.tabBrowser._setEffectAllowedForDataTransfer;
+            this.tabBrowser._setEffectAllowedForDataTransfer = function(aEvent) {
+                var mungeEvent = aEvent;
+                mungeEvent.__defineGetter__("screenX", function() { return -1000; });
+                return vertTabbar._setEffectAllowedForDataTransfer(mungeEvent);
+            };
+            this.tabBrowser.getNewIndex = function(aEvent) {
+                var i;
+                for (i = aEvent.target.localName == "tab" ?
+                        aEvent.target._tPos : 0; i < this.mTabs.length; i++)
+                    if (aEvent.screenY < this.mTabs[i].boxObject.screenY +
+                            this.mTabs[i].boxObject.height / 2)
+                        return i;
+                return this.mTabs.length;
+            };
+            // Setup the layout; do it as soon as possible to avoid flicker
+            // and do it anew after the load event to ensure TabMixPlus has
+            // finished messing with the tab bar.
+            this.setup();
+            setTimeout(function() {vertTabbar.setup();}, 0);
+        },
+        setup: function()
+        {
+            // Set the correct layout
+            this.tabBrowser.mTabBox.setAttribute("orient", "horizontal");
+            this.tabBrowser.mTabContainer
+                .mTabstrip.setAttribute("orient", "vertical");
+            // Tab Mix Plus compatibility
+            tframe = document.getAnonymousElementByAttribute(
+                        this.tabBrowser.mTabContainer,
+                        "anonid", "scroll-tabs-frame");
+            if(tframe)
+                tframe.setAttribute("orient", "vertical");
+            // Read prefs and update accordingly
+            this.update_width();
+            this.update_pos();
+            this.update_dir();
+            this.update_tabmove();
+            this.update_tabhighlight();
+            this.update_buttonreverse();
+        },
+        shutdown: function()
+        {
+            this.prefs.removeObserver("", this);
+        },
+        observe: function(subject, topic, data)
+        {
+            if (topic != "nsPref:changed") return;
+            if (data == "width") this.update_width();
+            if (data == "position") this.update_pos();
+            if (data == "reverseLabels") this.update_dir();
+            if (data == "tabmove") this.update_tabmove();
+            if (data == "tabhighlight") this.update_tabhighlight();
+            if (data == "swapButtons") this.update_buttonreverse();
+        },
+        update_width: function()
+        {
+            width = this.prefs.getIntPref("width");
+            container = this.tabBrowser.mTabContainer;
+            container.mTabMinWidth = width;
+            for (var i = container.childNodes.length - 1;
+                    i >= 0; --i) {
+                container.childNodes[i].minWidth = width;
+            }
+        },
+        update_pos: function()
+        {
+            if(this.prefs.getCharPref("position") == "left")
+            {
+                this.tabBrowser.mTabBox.setAttribute("dir", "ltr");
+            } else {
+                this.tabBrowser.mTabBox.setAttribute("dir", "rtl");
+            }
+        },
+        update_dir: function()
+        {
+            if(this.prefs.getBoolPref("reverseLabels"))
+            {
+                this.tabBrowser.mTabBox.setAttribute("labels", "reverse");
+            } else {
+                this.tabBrowser.mTabBox.removeAttribute("labels");
+            }
+        },
+        update_tabmove: function()
+        {
+            if(this.prefs.getBoolPref("tabmove"))
+            {
+                this.tabBrowser.mTabBox.setAttribute("tabmove", "true");
+            } else {
+                this.tabBrowser.mTabBox.setAttribute("tabmove", "false");
+            }
+        },
+        update_tabhighlight: function()
+        {
+            if(this.prefs.getBoolPref("tabhighlight"))
+            {
+                this.tabBrowser.mTabBox.setAttribute("tabhighlight", "true");
+            } else {
+                this.tabBrowser.mTabBox.setAttribute("tabhighlight", "false");
+            }
+        },
+        update_buttonreverse: function()
+        {
+            if(this.prefs.getBoolPref("swapButtons"))
+            {
+                this.tabBrowser.mTabBox.setAttribute("buttonreverse", "true");
+            } else {
+                this.tabBrowser.mTabBox.removeAttribute("buttonreverse");
+            }
+        },
+	move_tab_up: function()
+	{
+	    var tabbrowser = this.tabBrowser;
+            var pos = tabbrowser.mCurrentTab._tPos;
+	    if (pos > 0) {
+                tabbrowser.moveTabTo(tabbrowser.mCurrentTab, pos - 1);
+            }
+	},
+	move_tab_down: function()
+	{
+	    var tabbrowser = this.tabBrowser;
+            var pos = tabbrowser.mCurrentTab._tPos;
+            if (pos < tabbrowser.browsers.length - 1) {
+                tabbrowser.moveTabTo(tabbrowser.mCurrentTab, pos + 1);
+            }
+	},
+    }
+
+    window.addEventListener("load", function(e) {vertTabbar.startup();}, false);
+    window.addEventListener("unload", function(e) {vertTabbar.shutdown();}, false);
+]]>
+</script>
+</overlay>

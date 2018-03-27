@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Barオプション">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar 設定">
+<!ENTITY vtb.label.width.of.tab.bar "タブバーの幅:">
+<!ENTITY vtb.label.position "タブバーの位置:">
+<!ENTITY vtb.radio.position.left "左">
+<!ENTITY vtb.radio.position.right "右">
+<!ENTITY vtb.checkbox.reverse.labels.dir "タブタイトルを逆に並べる">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "閉じるボタンとサイトのアイコンの位置を入れ替える">
+<!ENTITY vtb.label.selectedtab "タブの選択時:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "強調する">
+<!ENTITY vtb.checkbox.selectedtab.effect "3D風に少し移動させる">

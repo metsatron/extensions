@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>sm-vtabbar@rn10950</em:id>
+    <em:version>1.0</em:version>
+    <em:type>2</em:type>
+    <!-- Front End MetaData -->
+    <em:name>SeaMonkey Vertical Tab Bar [converted]</em:name>
+    <em:description>Stack the tabs vertically. Based on VertTabbar.</em:description>
+    <em:creator>rn10950</em:creator>
+    <em:optionsURL>chrome://verttabbar/content/options.xul</em:optionsURL>
+    <em:translator>Archaeopteryx (de)</em:translator>
+    <em:translator>FZolee (hu-HU)</em:translator>
+    <em:translator>Goofy (fr)</em:translator>
+    <em:translator>greenmoon55 (zh-CN)</em:translator>
+    <em:translator>Haebaru (ja)</em:translator>
+    <em:translator>Julien "_FrnchFrgg" RIVAUD (fr)</em:translator>
+    <em:translator>Kacnepcku - PC (sr-RS)</em:translator>
+    <em:translator>Leszek(teo)Życzkowski (pl-PL)</em:translator>
+    <em:translator>Luana Di Muzio - BabelZilla (it-IT)</em:translator>
+    <em:translator>Luis Manson (es-AR)</em:translator>
+    <em:translator>Marcelo Ghelman (ghelman.net) (pt-BR)</em:translator>
+    <em:translator>muhengi (tr-TR)</em:translator>
+    <em:translator>renegade06 (mk-MK)</em:translator>
+    <em:translator>Sebastiaan Pasma, sebass.org (nl)</em:translator>
+    <em:translator>Snaka (ja)</em:translator>
+    <em:translator>Sonickydon (el-GR)</em:translator>
+    <em:translator>Team erweiterungen.de (de)</em:translator>
+    <em:translator>Володимир Савчук (Sappa) (uk-UA)</em:translator>
+    <em:translator>Пирятинский Виталий (ru-RU)</em:translator>
+    <!-- SeaMonkey (added by Add-on Converter) -->
+    <em:targetApplication>
+      <em:Description>
+        <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+        <em:minVersion>2.0</em:minVersion>
+        <em:maxVersion>2.*</em:maxVersion>
+      </em:Description>
+    </em:targetApplication>
+    <em:unpack>true</em:unpack>
+  </Description>
+</RDF>

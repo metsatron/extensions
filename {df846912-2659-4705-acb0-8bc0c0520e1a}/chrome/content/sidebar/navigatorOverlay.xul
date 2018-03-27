@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!DOCTYPE overlay SYSTEM "chrome://lightbird/locale/lightbird.dtd" >
+
+<overlay id="lightbirdNavigatorOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <broadcasterset id="mainBroadcasterSet">
+        <broadcaster id="viewlightbirdEventsSidebar"
+                     autoCheck="false"
+                     label="&sidebar.events.title;"
+                     type="checkbox"
+                     group="sidebar"
+                     sidebarurl="chrome://lightbird/content/sidebar/events.xul"
+                     sidebartitle="&sidebar.events.title;"
+                     oncommand="toggleSidebar('viewlightbirdEventsSidebar');"/>
+        <broadcaster id="viewlightbirdTasksSidebar"
+                     autoCheck="false"
+                     label="&sidebar.tasks.title;"
+                     type="checkbox"
+                     group="sidebar"
+                     sidebarurl="chrome://lightbird/content/sidebar/tasks.xul"
+                     sidebartitle="&sidebar.tasks.title;"
+                     oncommand="toggleSidebar('viewlightbirdTasksSidebar');"/>
+    </broadcasterset>
+</overlay>

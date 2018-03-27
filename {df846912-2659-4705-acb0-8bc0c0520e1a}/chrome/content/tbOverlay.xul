@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+
+<!DOCTYPE overlay
+[
+    <!ENTITY % dtd1 SYSTEM "chrome://lightbird/locale/lightbird.dtd" > %dtd1;
+    <!ENTITY % dtd2 SYSTEM "chrome://lightning/locale/lightning-toolbar.dtd" > %dtd2;
+    <!ENTITY % dtd3 SYSTEM "chrome://calendar/locale/calendar.dtd" > %dtd3;
+]>
+
+<?xml-stylesheet href="chrome://lightbird/skin/tbToolbar.css" type="text/css"?>
+
+<overlay id="lightbirdThunderbirdOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript"
+        src="chrome://lightbird/content/tasksOverlay.js"/>
+
+<keyset id="tasksKeys">
+  <key id="key_calendar"
+       key="&calendarCmd.commandkey;"
+       oncommand="lightbirdObject.toCalendar();"
+       modifiers="accel"/>
+</keyset>
+
+<menupopup id="appmenu_taskPopup">
+  <menuitem
+        label="&calendarCmd.label;"
+        accesskey="&calendarCmd.accesskey;"
+        key="key_calendar"
+        oncommand="lightbirdObject.toCalendar();"
+        id="appmenu_toolsMenuCalendar"
+        insertafter="appmenu_addressBook"/>
+</menupopup>
+
+<menupopup id="taskPopup">
+  <menuitem
+        label="&calendarCmd.label;"
+        accesskey="&calendarCmd.accesskey;"
+        key="key_calendar"
+        oncommand="lightbirdObject.toCalendar();"
+        id="toolsMenuCalendar"
+        insertafter="addressBook"/>
+</menupopup>
+
+<toolbarpalette id="MailToolbarPalette">
+    <toolbarbutton id="calendar-button"
+                   class="toolbarbutton-1"
+                   label="&lightning.toolbar.calendar.label;"
+                   tooltiptext="&lightning.toolbar.calendar.tooltip;"
+                   oncommand="lightbirdObject.toCalendar();"/>
+</toolbarpalette>
+
+<toolbarpalette id="header-view-toolbar-palette">
+  <toolbarbutton id="hdrExtractEventButton"
+                 class="toolbarbutton-1 msgHeaderView-button"
+                 type="menu-button"
+                 label="&calendar.extract.event.button;"
+                 tooltiptext="&calendar.extract.event.button.tooltip;"
+                 oncommand="calendarExtract.extractFromEmail(true)">
+    <menupopup id="hdrExtractEventLocaleList"
+               oncommand="calendarExtract.extractWithLocale(event, true);"
+               onpopupshowing="calendarExtract.onShowLocaleMenu(event.target);"/>
+  </toolbarbutton>
+  <toolbarbutton id="hdrExtractTaskButton"
+                 class="toolbarbutton-1 msgHeaderView-button"
+                 type="menu-button"
+                 label="&calendar.extract.task.button;"
+                 tooltiptext="&calendar.extract.task.button.tooltip;"
+                 oncommand="calendarExtract.extractFromEmail(false)">
+    <menupopup id="hdrExtractTaskLocaleList"
+               oncommand="calendarExtract.extractWithLocale(event, false);"
+               onpopupshowing="calendarExtract.onShowLocaleMenu(event.target);"/>
+  </toolbarbutton>
+</toolbarpalette>
+
+</overlay>

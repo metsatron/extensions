@@ -1,0 +1,169 @@
+/*
+# -*- Mode: Java; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*-
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+*/
+
+/*--------------------------------------------------------------------
+ *   toolbar
+ *-------------------------------------------------------------------*/
+
+#calendar-bar > .toolbar-holder > .toolbar-primary-icon {
+  background-image: url("chrome://lightbird/skin/sunbird/calendar_topbar.gif");
+}
+
+#calendar-controls-box
+{
+   background-image        : url("chrome://lightbird/skin/sunbird/calendar_topbar.gif");
+   background-repeat       : no-repeat;
+   min-height              : 33px;
+   max-height              : 33px;
+}
+
+/*--------------------------------------------------------------------
+ *   MAIN view deck - contains nav buttons and views
+ *-------------------------------------------------------------------*/
+#view-deck {
+  background: #FFFFFF;
+  padding: 0px;
+}
+
+.unifinder-closebutton {
+  background-color: transparent !important;
+  margin: 0px 4px !important;
+  padding: 3px 2px !important;
+  border: none !important;
+  list-style-image: url("chrome://global/skin/icons/close.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+.unifinder-closebutton:hover {
+  list-style-image: url("chrome://global/skin/icons/close-hov.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+.unifinder-closebutton:hover:active {
+  list-style-image: url("chrome://global/skin/icons/close-act.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+.unifinder-closebutton[disabled="true"] {
+  padding: 3px 2px !important;
+  list-style-image: url("chrome://global/skin/icons/close-dis.gif") !important;
+  -moz-image-region: auto !important;
+}
+
+#view-tabbox {
+    display: none;
+}
+
+/*--------------------------------------------------------------------
+ *   menubar
+ *-------------------------------------------------------------------*/
+#menubar-items {
+  -moz-box-orient: vertical; /* for flex hack */
+}
+
+#menubar-items > menubar {
+  -moz-box-flex: 1; /* make menu items expand to fill toolbar height */
+}
+
+/*--------------------------------------------------------------------
+ * print preview
+ *-------------------------------------------------------------------*/
+toolbar[printpreview="true"] {
+  -moz-binding: url("chrome://global/content/printPreviewBindings.xml#printpreviewtoolbar");
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, completed),
+.calendar-task-tree-col-completed {
+    list-style-image: url(chrome://global/skin/checkbox/cbox-check.gif);
+    -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, completed, current) {
+    list-style-image: url(chrome://global/skin/checkbox/cbox-act-check.gif);
+    -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, duetoday),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, overdue),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, future),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating) {
+    list-style-image: url(chrome://global/skin/checkbox/cbox.gif);
+    -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, duetoday, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, overdue, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, future, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, inprogress, current),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating, current) {
+    list-style-image: url(chrome://global/skin/checkbox/cbox-act.gif);
+    -moz-image-region: auto !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating),
+.calendar-task-tree > treechildren::-moz-tree-image(calendar-task-tree-col-completed, repeating, current) {
+    opacity: 0.2 !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-row(selected, focus),
+.calendar-task-tree > treechildren::-moz-tree-row(duetoday, selected, focus),
+.calendar-task-tree > treechildren::-moz-tree-row(future, selected, focus),
+.calendar-task-tree > treechildren::-moz-tree-row(completed, selected, focus) {
+    background-color: #424F63 !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-row(inprogress, selected, focus) {
+    background-color: #126312 !important;
+}
+
+.calendar-task-tree > treechildren::-moz-tree-row(overdue, selected, focus) {
+    background-color: #631212 !important;
+}
+
+#calsidebar_splitter {
+    border-width: 1px 2px !important;
+    border-style: solid !important;
+    -moz-border-top-colors: #DFE5EF !important;
+    -moz-border-right-colors: #3B414F #AAB4BF !important;
+    -moz-border-bottom-colors: #AAB4BF !important;
+    -moz-border-left-colors: #97A4B2 #DFE5EF !important;
+    min-width: 5px !important;
+    width: 9px !important;
+    background-color: #C1CBD5 !important;
+    margin-top: 0 !important;
+    -moz-margin-end: 0 !important;
+    position: static !important;
+    z-index: auto !important;
+    transition: none !important;
+}
+
+#unifinder-searchBox,
+#calendar-nav-control {
+    background: #C7D0D9 !important;
+}
+
+#unifinder-search-field,
+#view-task-edit-field,
+#task-text-filter-field,
+#unifinder-task-edit-field {
+    border: 2px solid !important;
+    -moz-border-top-colors: #BEC3D3 #5D616E !important;
+    -moz-border-right-colors: #F8FAFE #5D616E !important;
+    -moz-border-bottom-colors: #F8FAFE #5D616E !important;
+    -moz-border-left-colors: #BEC3D3 #5D616E !important;
+}
+
+#unifinder-search-field[focused="true"],
+#view-task-edit-field[focused="true"],
+#task-text-filter-field[focused="true"],
+#unifinder-task-edit-field[focused="true"] {
+    -moz-border-top-colors: #98A5B2 #000000 !important;
+    -moz-border-right-colors: #98A5B2 #000000 !important;
+    -moz-border-bottom-colors: #98A5B2 #000000 !important;
+    -moz-border-left-colors: #98A5B2 #000000 !important;
+}

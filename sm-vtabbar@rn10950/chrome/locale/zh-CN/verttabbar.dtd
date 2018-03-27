@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar 选项">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar 设置">
+<!ENTITY vtb.label.width.of.tab.bar "标签栏宽度：">
+<!ENTITY vtb.label.position "标签栏位置：">
+<!ENTITY vtb.radio.position.left "左侧">
+<!ENTITY vtb.radio.position.right "右侧">
+<!ENTITY vtb.checkbox.reverse.labels.dir "反向排列标签中的文字">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "交换关闭按钮和网站图标的位置">
+<!ENTITY vtb.label.selectedtab "When a tab is selected:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Highlight it">
+<!ENTITY vtb.checkbox.selectedtab.effect "Move it a little to increase the 3D impression">

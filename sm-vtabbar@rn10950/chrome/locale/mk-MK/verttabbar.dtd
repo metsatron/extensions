@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar Опции">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar Поставувања">
+<!ENTITY vtb.label.width.of.tab.bar "Ширина на лентата на јазичето:">
+<!ENTITY vtb.label.position "Позиција на лентата на јазичето:">
+<!ENTITY vtb.radio.position.left "Лево">
+<!ENTITY vtb.radio.position.right "Десно">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Обратно порамнување на насловите на јазичињата">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Смени ја позицијата на копчето за затворање и иконата на страницата">
+<!ENTITY vtb.label.selectedtab "Кога е избрано јазиче:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Означи го">
+<!ENTITY vtb.checkbox.selectedtab.effect "Помести го малку за да се зголеми 3D впечатокот">

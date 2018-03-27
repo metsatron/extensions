@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "Επιλογές SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.prefpane.verttabbar.settings "Ρυθμίσεις SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.label.width.of.tab.bar "Πλάτος εργαλειοθήκης καρτελών:">
+<!ENTITY vtb.label.position "Θέση εργαλειοθήκης καρτελών:">
+<!ENTITY vtb.radio.position.left "Αριστερά">
+<!ENTITY vtb.radio.position.right "Δεξιά">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Ανάποδη στοίχιση τίτλων καρτελών">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Εναλλαγή θέσης εικονιδίου ιστότοπου και εικονιδίου κλεισίματος">
+<!ENTITY vtb.label.selectedtab "Όταν επιλεγεί καρτέλα:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Επισήμανση">
+<!ENTITY vtb.checkbox.selectedtab.effect "Μετακίνηση της ελαφρά για δημιουργία τρισδιάστατου εφέ">

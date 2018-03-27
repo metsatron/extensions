@@ -1,0 +1,22 @@
+content verttabbar chrome/content/
+overlay chrome://browser/content/browser.xul chrome://verttabbar/content/browser.xul
+overlay chrome://navigator/content/navigator.xul chrome://verttabbar/content/browser.xul
+style   chrome://browser/content/browser.xul chrome://verttabbar/content/browser.css
+style   chrome://navigator/content/navigator.xul chrome://verttabbar/content/browser.css
+locale verttabbar de    chrome/locale/de/
+locale verttabbar el-GR chrome/locale/el-GR/
+locale verttabbar en-US chrome/locale/en-US/
+locale verttabbar es-AR chrome/locale/es-AR/
+locale verttabbar fr    chrome/locale/fr/
+locale verttabbar hu-HU chrome/locale/hu-HU/
+locale verttabbar it-IT chrome/locale/it-IT/
+locale verttabbar ja    chrome/locale/ja/
+locale verttabbar mk-MK chrome/locale/mk-MK/
+locale verttabbar nl    chrome/locale/nl/
+locale verttabbar pl-PL chrome/locale/pl-PL/
+locale verttabbar pt-BR chrome/locale/pt-BR/
+locale verttabbar ru-RU chrome/locale/ru-RU/
+locale verttabbar sr-RS chrome/locale/sr-RS/
+locale verttabbar tr-TR chrome/locale/tr-TR/
+locale verttabbar uk-UA chrome/locale/uk-UA/
+locale verttabbar zh-CN chrome/locale/zh-CN/

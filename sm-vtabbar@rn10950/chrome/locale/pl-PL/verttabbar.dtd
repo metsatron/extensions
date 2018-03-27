@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar - opcje">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar - ustawienia">
+<!ENTITY vtb.label.width.of.tab.bar "Szerokość panelu kart:">
+<!ENTITY vtb.label.position "Położenie panelu kart:">
+<!ENTITY vtb.radio.position.left "po lewej stronie">
+<!ENTITY vtb.radio.position.right "po prawej stronie">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Odwracaj wyrównanie tekstu w etykietach kart">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Zamień położenie przycisku zamykania i ikony witryny">
+<!ENTITY vtb.label.selectedtab "Po uaktywnieniu karty:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Wyróżnij etykietę karty">
+<!ENTITY vtb.checkbox.selectedtab.effect "Przesuń etykietę karty, aby wzmocnić efekt 3D">

@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar Seçenekleri">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar Ayarları">
+<!ENTITY vtb.label.width.of.tab.bar "Sekme Çubuğu genişliği:">
+<!ENTITY vtb.label.position "Sekme Çubuğu pozisyonu:">
+<!ENTITY vtb.radio.position.left "Sol">
+<!ENTITY vtb.radio.position.right "Sağ">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Sekmelerdeki metinleri tersten hizala">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "kapatma butonunun ve sitenin ikonunun yerini değiştir">
+<!ENTITY vtb.label.selectedtab "Seçilen Sekmeler:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Vurgula">
+<!ENTITY vtb.checkbox.selectedtab.effect "3 boyutlu gösterimi arttırmak için biraz taşı">

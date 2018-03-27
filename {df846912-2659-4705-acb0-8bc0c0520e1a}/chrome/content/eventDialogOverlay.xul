@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<?xul-overlay href="chrome://communicator/content/tasksOverlay.xul"?>
+<?xul-overlay href="chrome://communicator/content/utilityOverlay.xul"?>
+
+<?xml-stylesheet href="chrome://lightbird/skin/eventDialogOverlay.css" type="text/css"?>
+
+<overlay id="lightbirdCalendarEventDialogOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/javascript" src="chrome://lightbird/content/lightning-hooks.js" />
+
+  <menubar id="event-menubar">
+    <menu id="tasksMenu" />
+    <menu id="windowMenu" />
+    <menu id="menu_Help" />
+  </menubar>
+
+  <toolbar id="event-toolbar"
+           labelalign=""
+           defaultlabelalign=""
+           class="chromeclass-toolbar toolbar-primary" />
+
+  <commandset id="itemCommands">
+    <commandset id="tasksCommands" />
+  </commandset>
+
+  <keyset id="calendar-event-dialog-keyset">
+    <keyset id="tasksKeys" />
+  </keyset>
+
+  <statusbar id="status-bar">
+    <statusbarpanel id="component-bar" insertbefore="status-text" />
+    <statusbarpanel id="offline-status"
+                    class="statusbarpanel-iconic" />
+  </statusbar>
+</overlay>

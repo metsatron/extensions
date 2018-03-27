@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE prefwindow SYSTEM "chrome://verttabbar/locale/verttabbar.dtd">
+
+<prefwindow id="verttabbar-options"
+  title="&vtb.prefwindow.verttabbar.options;"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  buttons="accept"
+  buttonlabelaccept="Close">
+
+  <prefpane id="verttabbar-settings" label="&vtb.prefpane.verttabbar.settings;">
+    <preferences>
+      <preference id="pref_width" name="verttabbar.width" type="int"
+        instantApply="true"/>
+      <preference id="pref_pos" name="verttabbar.position" type="string"
+        instantApply="true"/>
+      <preference id="pref_labels" name="verttabbar.reverseLabels" type="bool"
+        instantApply="true"/>
+      <preference id="pref_buttonreverse" name="verttabbar.swapButtons"
+        type="bool" instantApply="true"/>
+      <preference id="pref_tabmove" name="verttabbar.tabmove" type="bool"
+        instantApply="true"/>
+      <preference id="pref_highlight" name="verttabbar.tabhighlight"
+        type="bool" instantApply="true"/>
+    </preferences>
+    <hbox align="center">
+      <label control="width" value="&vtb.label.width.of.tab.bar;"/>
+      <textbox id="width" preference="pref_width" type="number" width="50"
+        min="0"/>
+    </hbox>
+    <command id="cmd_posleft" oncommand="prefPos.value = 'left';"/>
+    <command id="cmd_posright" oncommand="prefPos.value = 'right';"/>
+    <groupbox>
+      <caption label="&vtb.label.position;"/>
+      <radiogroup id="pos" orient="horizontal">
+        <radio id="posleft" command="cmd_posleft"
+          label="&vtb.radio.position.left;"/>
+        <radio id="posright" command="cmd_posright"
+          label="&vtb.radio.position.right;" selected="true"/>
+      </radiogroup>
+    </groupbox>
+    <groupbox>
+      <caption label="&vtb.label.selectedtab;"/>
+      <checkbox id="tabmove" preference="pref_tabmove"
+        label="&vtb.checkbox.selectedtab.effect;"/>
+      <checkbox id="tabhighlight" preference="pref_highlight"
+        label="&vtb.checkbox.selectedtab.highlight;"/>
+    </groupbox>
+    <checkbox id="labels" preference="pref_labels"
+      label="&vtb.checkbox.reverse.labels.dir;"/>
+    <checkbox id="buttonreverse" preference="pref_buttonreverse"
+      label="&vtb.checkbox.swap.button.and.favicon;"/>
+    <script>
+      <![CDATA[
+      var prefPos = document.getElementById("pref_pos");
+      if(prefPos.value == "left")
+      document.getElementById("pos").selectedIndex = 0;
+      ]]>
+    </script>
+  </prefpane>
+</prefwindow>

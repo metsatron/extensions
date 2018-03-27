@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "Опције НапоредЈезичака">
+<!ENTITY vtb.prefpane.verttabbar.settings "Подешавања НапоредЈезичака">
+<!ENTITY vtb.label.width.of.tab.bar "Ширина траке са језичцима:">
+<!ENTITY vtb.label.position "Место траке са језичцима:">
+<!ENTITY vtb.radio.position.left "лево">
+<!ENTITY vtb.radio.position.right "десно">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Обрни поравнање наслова језичака">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Замени места дугмади за затварање и фавиконе">
+<!ENTITY vtb.label.selectedtab "Када је језичак обележен:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "означи га">
+<!ENTITY vtb.checkbox.selectedtab.effect "мало га помери да би се добио 3Д утисак">

@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar - Настройки">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar - Настройки">
+<!ENTITY vtb.label.width.of.tab.bar "Ширина панели вкладок:">
+<!ENTITY vtb.label.position "Расположить панель вкладок:">
+<!ENTITY vtb.radio.position.left "слева">
+<!ENTITY vtb.radio.position.right "справа">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Изменить выравнивание текста во вкладках на обратное">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Переставить местами кнопку закрытия и значок сайта">
+<!ENTITY vtb.label.selectedtab "При выборе вкладки:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "подсветить её">
+<!ENTITY vtb.checkbox.selectedtab.effect "подвинуть её, немного увеличив эффект трёхмерности">

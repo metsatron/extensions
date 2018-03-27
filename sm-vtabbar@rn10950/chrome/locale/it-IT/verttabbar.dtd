@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "Opzioni di SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.prefpane.verttabbar.settings "Impostazioni di SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.label.width.of.tab.bar "Pixel di larghezza della barra delle schede:">
+<!ENTITY vtb.label.position "Posizione della barra delle schede">
+<!ENTITY vtb.radio.position.left "A sinistra">
+<!ENTITY vtb.radio.position.right "A destra">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Avvicina/allontana i titoli delle schede alle/dalle relative favicon">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Inverti la posizione del pulsante di chiusura delle schede">
+<!ENTITY vtb.label.selectedtab "Azione da effettuare quando una scheda viene selezionata">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Evidenzia il cartellino della scheda">
+<!ENTITY vtb.checkbox.selectedtab.effect "Sposta leggermente il bordo laterale della scheda">

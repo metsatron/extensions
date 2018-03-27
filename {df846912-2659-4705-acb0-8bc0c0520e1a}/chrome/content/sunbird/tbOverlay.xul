@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<?xml-stylesheet href="chrome://lightbird/skin/sunbird/tbOverlay.css" type="text/css"?>
+
+<!DOCTYPE overlay
+[
+  <!ENTITY % sunbirdDTD SYSTEM "chrome://lightbird/locale/sunbird.dtd" > %sunbirdDTD;
+  <!ENTITY % calendarMenuOverlayDTD SYSTEM "chrome://calendar/locale/menuOverlay.dtd" > %calendarMenuOverlayDTD;
+  <!ENTITY % menuOverlayDTD SYSTEM "chrome://lightbird/locale/menuOverlay.dtd" > %menuOverlayDTD;
+  <!ENTITY % messengerDTD SYSTEM "chrome://messenger/locale/messenger.dtd" > %messengerDTD;
+]>
+
+<overlay id="lightbirdThunderbirdCompatOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    <script type="application/javascript" src="chrome://lightbird/content/sunbird/tbOverlay.js"/>
+
+    <broadcasterset id="calendar_broadcasters">
+        <broadcaster id="cmd_CustomizeToolbars" removeelement="true"/>
+    </broadcasterset>
+
+    <commandset id="calendar_commands">
+        <command id="cmd_CustomizeToolbars" oncommand="CalendarCustomizeToolbar()"/>
+    </commandset>
+
+    <popupset id="calendar-popupset">
+        <menupopup id="toolbar-context-menu"
+                   onpopupshowing="sbOnViewToolbarsPopupShowing(event);">
+            <menuseparator/>
+            <menuitem id="calendar-view-menu-customize"
+                      observes="cmd_CustomizeToolbars"
+                      label="&sunbird.menu.customize.label;"
+                      accesskey="&sunbird.menu.customize.accesskey;"/>
+        </menupopup>
+    </popupset>
+
+    <menuseparator id="calendar-print-sep" removeelement="true"/>
+    <menuitem id="offlineGoOfflineCmd" removeelement="true"/>
+
+    <menuseparator id="menu_viewApplyTheme_separator" removeelement="true"/>
+    <menu id="menu_viewApplyTheme" removeelement="true"/>
+
+    <menuitem id="menu_preferences" oncommand="openOptionsDialog('paneLightning')"/>
+
+    <menupopup id="menu_FilePopup">
+        <menu id="menu_New" removeelement="true"/>
+        <menuitem id="calendar-new-event-menu"
+                    key="calendar-new-event-key"
+                    label="&event.new.event;"
+                    accesskey="&event.new.event.accesskey;"
+                    observes="calendar_new_event_command"
+                    insertbefore="calendar-open-calendar-menu"/>
+        <menuitem id="calendar-new-todo-menu"
+                    key="calendar-new-todo-key"
+                    label="&event.new.task;"
+                    accesskey="&event.new.task.accesskey;"
+                    observes="calendar_new_todo_command"
+                    insertbefore="calendar-open-calendar-menu"/>
+        <menuitem id="calendar-new-calendar-menu"
+                    key="new_calendar_key"
+                    label="&calendar.new.server.label;"
+                    accesskey="&calendar.new.server.accesskey;"
+                    observes="calendar_new_calendar_command"
+                    insertbefore="calendar-open-calendar-menu"/>
+    </menupopup>
+
+    <menu id="menu_Toolbars"
+          onpopupshowing="sbOnViewToolbarsPopupShowing(event);">
+        <menupopup id="view_toolbars_popup">
+            <menuseparator/>
+            <menuitem id="calendar-view-menu-customize"
+                      observes="cmd_CustomizeToolbars"
+                      label="&sunbird.menu.customize.label;"
+                      accesskey="&sunbird.menu.customize.accesskey;"/>
+        </menupopup>
+    </menu>
+
+    <statusbar id="status-bar">
+        <statusbarpanel id="component-bar"  removeelement="true"/>
+        <statusbarpanel id="offline-status" removeelement="true"/>
+        <statusbarpanel id="offline-status-tb"
+                        class="statusbarpanel-iconic"
+                        oncommand="calendarOfflineManager.toggleOfflineStatus()"
+                        offline="true"
+                        observes="Communicator:WorkMode"
+                        insertbefore="statusText"/>
+    </statusbar>
+</overlay>

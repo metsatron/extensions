@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar Options">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar Settings">
+<!ENTITY vtb.label.width.of.tab.bar "Width of tab bar:">
+<!ENTITY vtb.label.position "Position of the tab bar:">
+<!ENTITY vtb.radio.position.left "Left">
+<!ENTITY vtb.radio.position.right "Right">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Reverse align of tab titles">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Swap position of close button and site&apos;s icon">
+<!ENTITY vtb.label.selectedtab "When a tab is selected:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Highlight it">
+<!ENTITY vtb.checkbox.selectedtab.effect "Move it a little to increase the 3D impression">

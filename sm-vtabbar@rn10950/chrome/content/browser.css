@@ -1,0 +1,245 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+
+
+.tab-drop-indicator-bar
+{
+    display: none; /* until I update the indicator pos correctly */
+}
+
+.tabbrowser-tab {
+	padding-right: 5px;
+}
+
+.tabs-stack > vbox {
+	 -moz-box-orient: horizontal !important;
+}
+
+.tabs-newbutton {
+	margin-bottom: 1px;
+}
+
+.tabs-stack > vbox > hbox {
+	-moz-box-orient: vertical !important;
+}
+
+.tabs-container > stack,
+.tabs-bottom
+{
+    display: none;
+}
+.tabs-closebutton-box {
+	margin-right: 0;
+	border-top: 2px ridge;
+}
+
+.tabbrowser-strip,
+.tabbrowser-tabs
+{
+    /*border: 1px solid red ! important;*/
+    padding: 0 ! important;
+    -moz-box-pack: start ! important;
+    -moz-box-align: stretch ! important;
+    -moz-box-orient: horizontal ! important;
+}
+
+.tabbrowser-strip
+{
+    /*background: Window ! important;*/
+	background-color: -moz-Window !important;
+}
+
+.tabbrowser-tabs
+{
+    background: none ! important;
+}
+
+tabbox[dir="ltr"] .tabbrowser-strip
+{
+    border-right: 1px solid ThreeDShadow ! important;
+    padding-right: 2px ! important;
+}
+
+tabbox[dir="rtl"] .tabbrowser-strip
+{
+    border-left: 1px solid ThreeDHighlight ! important;
+    padding-left: 2px ! important;
+}
+
+.tabs-container
+{
+    -moz-box-orient: vertical;
+    padding: 0 ! important;
+}
+
+tabbox[dir="ltr"] .tabs-container
+{
+    border-right: 1px solid ThreeDHighlight ! important;
+}
+
+tabbox[dir="rtl"] .tabs-container
+{
+    border-left: 1px solid ThreeDShadow ! important;
+}
+
+
+tabbox[dir="ltr"] .tabbrowser-arrowscrollbox,
+tabbox[dir="ltr"] .tabs-frame /* TabMixPlus compat */
+{
+    direction: rtl;
+    margin-right: -1px ! important;
+}
+
+tabbox[dir="rtl"] .tabbrowser-arrowscrollbox,
+tabbox[dir="rtl"] .tabs-frame /* TabMixPlus compat */
+{
+    direction: ltr;
+    margin-left: -1px ! important;
+}
+
+.tabbrowser-arrowscrollbox .scrollbutton-up,
+.tabbrowser-arrowscrollbox .scrollbutton-down
+{
+    -moz-margin-start: 1px ! important;
+    -moz-appearance: none;
+}
+
+.tabs-container .scrollbox-innerbox
+{
+    -moz-border-start: 1px solid ThreeDShadow ! important;
+    padding: 3px 2px ! important;
+    -moz-padding-start: 0 ! important;
+    -moz-box-align: start;
+}
+
+tabbox[dir="ltr"] .tabs-container .scrollbox-innerbox
+{
+    -moz-border-start-color: ThreeDHighlight ! important;
+}
+
+
+#content .tabbrowser-tab /* increase specificity of selector */
+{
+    min-height: 26px;
+    max-height: 26px;
+
+    -moz-appearance: none;
+
+    margin: 0 ! important;
+
+    -moz-border-radius: 5px ! important;
+
+    border: 1px solid ThreeDShadow ! important;
+    border-left-color: ThreeDHighlight ! important;
+    border-top-color: ThreeDHighlight ! important;
+    -moz-border-left-colors: none ! important;
+    -moz-border-top-colors: none ! important;
+    -moz-border-right-colors: none ! important;
+    -moz-border-bottom-colors: none ! important;
+
+    -moz-background-clip: padding;
+
+    padding: 0;
+}
+
+#content tabbox[dir="ltr"] .tabbrowser-tab
+{
+    border-right-color: transparent ! important;
+    -moz-border-radius-topright: 0 ! important;
+    -moz-border-radius-bottomright: 0 ! important;
+}
+
+#content tabbox[dir="rtl"] .tabbrowser-tab
+{
+    border-left-color: transparent ! important;
+    -moz-border-radius-topleft: 0 ! important;
+    -moz-border-radius-bottomleft: 0 ! important;
+}
+
+#content tabbox[tabmove="false"][dir="ltr"]  .tabbrowser-tab
+{
+    margin-right: -1px ! important;
+}
+
+#content tabbox[tabmove="false"][dir="rtl"]  .tabbrowser-tab
+{
+    margin-left: -1px ! important;
+}
+
+#content .tabbrowser-tab[selected="true"]
+{
+    min-height: 28px;
+    max-height: 28px;
+
+    position: relative;
+    z-index: 1;
+
+   /* margin: -1px ! important;*/
+}
+
+#content tabbox[tabhighlight="true"] .tabbrowser-tab[selected="true"]
+{
+    background-color: Highlight !important;
+    color: HighlightText !important;
+}
+
+#content tabbox[dir="ltr"] .tabbrowser-tab[selected="true"]
+{
+    margin-left: 0 ! important;
+    border-right-color: Window ! important;
+}
+
+#content tabbox[dir="rtl"] .tabbrowser-tab[selected="true"]
+{
+    margin-right: 0 ! important;
+    border-left-color: Window ! important;
+}
+
+#content tabbox[dir="ltr"][buttonreverse="true"] .tabbrowser-tab
+{
+    direction: ltr;
+}
+
+#content tabbox[dir="rtl"][buttonreverse="true"] .tabbrowser-tab
+{
+    direction: rtl;
+}
+
+.tab-close-button
+{
+    -moz-margin-end: 2px ! important;
+}
+
+.tabbrowser-tab *:not(image)
+{
+    background: none ! important;
+}
+
+
+.tabbrowser-tab:not([chromedir="rtl"]) .tab-text,
+tabbox[labels="reverse"] .tabbrowser-tab[chromedir="rtl"] .tab-text,
+/* TMP compat */
+.tabbrowser-tab:not([chromedir="rtl"]) .tab-text-container,
+tabbox[labels="reverse"] .tabbrowser-tab[chromedir="rtl"] .tab-text-container
+{
+    direction: ltr ! important;
+}
+
+.tabbrowser-tab[chromedir="rtl"] .tab-text,
+tabbox[labels="reverse"] .tabbrowser-tab:not([chromedir="rtl"]) .tab-text,
+/* TMP compat */
+.tabbrowser-tab[chromedir="rtl"] .tab-text-container,
+tabbox[labels="reverse"] .tabbrowser-tab:not([chromedir="rtl"]) .tab-text-container
+{
+    direction: rtl ! important;
+}
+
+
+.tabbrowser-tab[selected="true"]{
+	border-left: 1px solid ThreeDHighlight;
+	border-top: 1px solid ThreeDHighlight;
+	border-right: 1px solid ThreeDShadow;
+	border-bottom: 1px solid ThreeDShadow;
+	outline: 1px solid black;
+	font-weight: bold;
+}

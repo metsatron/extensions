@@ -1,0 +1,38 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+#extractEventButton,
+#hdrExtractEventButton {
+  list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newevent); }
+  @media (-moz-mac-yosemite-theme) {
+    #extractEventButton,
+    #hdrExtractEventButton {
+      list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newevent-flat); } }
+  toolbar[brighttext] #extractEventButton, toolbar[brighttext]
+  #hdrExtractEventButton {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#newevent-inverted"); }
+
+#extractTaskButton,
+#hdrExtractTaskButton {
+  list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newtask); }
+  @media (-moz-mac-yosemite-theme) {
+    #extractTaskButton,
+    #hdrExtractTaskButton {
+      list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#newtask-flat); } }
+  toolbar[brighttext] #extractTaskButton, toolbar[brighttext]
+  #hdrExtractTaskButton {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#newtask-inverted"); }
+
+#calendar-button {
+  list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#calendar-tab"); }
+  #calendar-button[BiffState="Alarm"] {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#priority"); }
+  @media (-moz-mac-yosemite-theme) {
+    #calendar-button {
+      list-style-image: url(chrome://lightbird/skin/calendar-toolbar.svg#calendar-tab-flat); }
+      #calendar-button[BiffState="Alarm"] {
+        list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#priority-flat"); } }
+  toolbar[brighttext] #calendar-button {
+    list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#calendar-tab-inverted"); }
+    toolbar[brighttext] #calendar-button[BiffState="Alarm"] {
+      list-style-image: url("chrome://lightbird/skin/calendar-toolbar.svg#priority-inverted"); }

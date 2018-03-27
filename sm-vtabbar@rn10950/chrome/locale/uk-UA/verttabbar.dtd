@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "Параметри SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.prefpane.verttabbar.settings "Налаштування SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.label.width.of.tab.bar "Ширина панелі вкладок:">
+<!ENTITY vtb.label.position "Розташування панелі вкладок:">
+<!ENTITY vtb.radio.position.left "Ліворуч">
+<!ENTITY vtb.radio.position.right "Праворуч">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Змінити вирівнювання заголовків вкладок на протилежне">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Поміняти місцями кнопку закриття і іконку сайту">
+<!ENTITY vtb.label.selectedtab "Коли вкладка обрана:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Виділити її">
+<!ENTITY vtb.checkbox.selectedtab.effect "Трохи збільшити її для створення 3D враження">

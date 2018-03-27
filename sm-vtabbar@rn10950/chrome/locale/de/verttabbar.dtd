@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar - Einstellungen">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar - Einstellungen">
+<!ENTITY vtb.label.width.of.tab.bar "Breite der Tab-Leiste:">
+<!ENTITY vtb.label.position "Position der Tab-Leiste:">
+<!ENTITY vtb.radio.position.left "Links">
+<!ENTITY vtb.radio.position.right "Rechts">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Textausrichtung der Tabs umkehren">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Position von Favicon und &quot;Schließen&quot;-Schaltfläche vertauschen">
+<!ENTITY vtb.label.selectedtab "Markierung für den aktiven Tab:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Farbig hervorheben">
+<!ENTITY vtb.checkbox.selectedtab.effect "Leicht in Richtung Anzeigebereich verschieben">

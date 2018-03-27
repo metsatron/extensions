@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "Options de l&apos;extension SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.prefpane.verttabbar.settings "Paramètres d&apos;affichage de la barre verticale d&apos;onglets">
+<!ENTITY vtb.label.width.of.tab.bar "Largeur de la barre d&apos;onglets :">
+<!ENTITY vtb.label.position "Position de la barre d&apos;onglets:">
+<!ENTITY vtb.radio.position.left "À gauche">
+<!ENTITY vtb.radio.position.right "À droite">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Inverser l&apos;alignement du titre des onglets">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Échanger les positions de l&apos;icône du site et du bouton de fermeture">
+<!ENTITY vtb.label.selectedtab "Quand un onglet est sélectionné:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Le mettre en surbrillance">
+<!ENTITY vtb.checkbox.selectedtab.effect "Le déplacer légèrement pour accentuer l&apos;impression 3D">

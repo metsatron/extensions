@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "Opciones de SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.prefpane.verttabbar.settings "Configuración de SeaMonkey Vertical Tab Bar">
+<!ENTITY vtb.label.width.of.tab.bar "Ancho de la barra de pestañas:">
+<!ENTITY vtb.label.position "Posicion de la barra de pestañas:">
+<!ENTITY vtb.radio.position.left "Izquierda">
+<!ENTITY vtb.radio.position.right "Derecha">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Invertir la alineación del texto en las pestañas">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Intercambiar posición entre el botón cerrar y el icono del sitio">
+<!ENTITY vtb.label.selectedtab "Cuando una pestaña es seleccionada:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Destacarla">
+<!ENTITY vtb.checkbox.selectedtab.effect "Moverla un poquito para aumentar la apariencia 3D">

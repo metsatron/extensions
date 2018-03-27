@@ -1,0 +1,11 @@
+<!ENTITY vtb.prefwindow.verttabbar.options "SeaMonkey Vertical Tab Bar Opties">
+<!ENTITY vtb.prefpane.verttabbar.settings "SeaMonkey Vertical Tab Bar Instellingen">
+<!ENTITY vtb.label.width.of.tab.bar "Breedte van de tab balk:">
+<!ENTITY vtb.label.position "Positie van de tab balk:">
+<!ENTITY vtb.radio.position.left "Links">
+<!ENTITY vtb.radio.position.right "Rechts">
+<!ENTITY vtb.checkbox.reverse.labels.dir "Uitlijning van tab titels omkeren">
+<!ENTITY vtb.checkbox.swap.button.and.favicon "Positie van sluit-knop en site-icoon omwisselen">
+<!ENTITY vtb.label.selectedtab "Als een tab geselecteerd is:">
+<!ENTITY vtb.checkbox.selectedtab.highlight "Markeren">
+<!ENTITY vtb.checkbox.selectedtab.effect "Verplaats het een stukje om de 3D impressie te vergroten">
